@@ -271,6 +271,21 @@
   .timeline-card .desc {
     font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65;
   }
+  /* sub-project within a company */
+  .sub-project {
+    margin-top: 16px; padding-top: 16px;
+    border-top: 1px dashed var(--border);
+  }
+  .sub-project:first-child {
+    margin-top: 8px; padding-top: 0; border-top: none;
+  }
+  .sub-project-name {
+    font-size: 0.88rem; color: var(--accent); font-weight: 600; margin-bottom: 2px;
+  }
+  .period-sub {
+    margin-bottom: 4px;
+  }
+
   .timeline-card .tech-tags {
     display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px;
   }
@@ -476,58 +491,60 @@
     <p class="section-label">03 / 工作经历</p>
     <h3 class="section-title">职业历程</h3>
     <div class="timeline">
+      <!-- 上海龙之云 -->
       <div class="timeline-item">
         <div class="timeline-card">
           <div class="company">上海龙之云科技有限公司</div>
-          <div class="project">海通证券 — 前台开户系统</div>
           <div class="period">2019.06 — 2022.06</div>
-          <p class="desc">参与搭建员工平台，负责创业板转签、融资融券、风险警示股票交易、深圳期权开通、证券账户开立、OTC账户开立、个人信息变更、普通账户密码重置等核心业务模块，处理监管紧急需求。</p>
-          <div class="tech-tags"><span class="tech-tag">SSM</span><span class="tech-tag">MySQL</span><span class="tech-tag">jQuery</span><span class="tech-tag">Maven</span><span class="tech-tag">Git</span><span class="tech-tag">Jira</span></div>
+          <div class="sub-project">
+            <div class="sub-project-name">海通证券 — 前台开户系统</div>
+            <p class="desc">参与搭建员工平台，负责创业板转签、融资融券、风险警示股票交易、深圳期权开通、证券账户开立、OTC账户开立、个人信息变更、普通账户密码重置等核心业务模块，处理监管紧急需求。</p>
+            <div class="tech-tags"><span class="tech-tag">SSM</span><span class="tech-tag">MySQL</span><span class="tech-tag">jQuery</span><span class="tech-tag">Maven</span><span class="tech-tag">Git</span><span class="tech-tag">Jira</span></div>
+          </div>
         </div>
       </div>
+      <!-- 青岛蓝海汇 -->
       <div class="timeline-item">
         <div class="timeline-card">
           <div class="company">青岛蓝海汇网络科技有限公司</div>
-          <div class="project">光明E贷 — P2P金融平台</div>
-          <div class="period">2018.03 — 2019.03</div>
-          <p class="desc">参与需求调研与讨论，负责充值、支付、风控模块的数据库设计，实现登录模块（找回密码）、风控材料认证、消息管理（邮件提醒）、第三方支付集成、利息计算与还款业务。基于SSM + Nginx负载均衡 + Redis分布式缓存架构。</p>
-          <div class="tech-tags"><span class="tech-tag">SSM</span><span class="tech-tag">Redis</span><span class="tech-tag">Nginx</span><span class="tech-tag">MySQL</span><span class="tech-tag">Maven</span></div>
+          <div class="period">2016.10 — 2019.03</div>
+          <div class="sub-project">
+            <div class="sub-project-name">光明E贷 — P2P金融平台</div>
+            <div class="period period-sub">2018.03 — 2019.03</div>
+            <p class="desc">参与需求调研与讨论，负责充值、支付、风控模块的数据库设计，实现登录模块（找回密码）、风控材料认证、消息管理（邮件提醒）、第三方支付集成、利息计算与还款业务。基于SSM + Nginx负载均衡 + Redis分布式缓存架构。</p>
+            <div class="tech-tags"><span class="tech-tag">SSM</span><span class="tech-tag">Redis</span><span class="tech-tag">Nginx</span><span class="tech-tag">MySQL</span><span class="tech-tag">Maven</span></div>
+          </div>
+          <div class="sub-project">
+            <div class="sub-project-name">艾尚团购 — 电商平台</div>
+            <div class="period period-sub">2017.05 — 2018.03</div>
+            <p class="desc">参与团购模块构建与开发，负责第三方登录、购物车、第三方支付模块开发，负责后台订单管理和商品管理，使用MQ消息队列实现商品变更时向前台及搜索模块推送消息。</p>
+            <div class="tech-tags"><span class="tech-tag">SSM</span><span class="tech-tag">Redis</span><span class="tech-tag">RabbitMQ</span><span class="tech-tag">REST API</span></div>
+          </div>
+          <div class="sub-project">
+            <div class="sub-project-name">集鲜送 — 生鲜批发APP</div>
+            <div class="period period-sub">2016.10 — 2017.05</div>
+            <p class="desc">负责与上级对接业务思路，搭建测试环境，分配任务，处理老数据兼容，负责提现、结算、支付模块开发。基于SpringBoot + Dubbo微服务架构。</p>
+            <div class="tech-tags"><span class="tech-tag">SpringBoot</span><span class="tech-tag">Dubbo</span><span class="tech-tag">Redis</span><span class="tech-tag">MyBatis</span></div>
+          </div>
         </div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-card">
-          <div class="company">青岛蓝海汇网络科技有限公司</div>
-          <div class="project">艾尚团购 — 电商平台</div>
-          <div class="period">2017.05 — 2018.03</div>
-          <p class="desc">参与团购模块构建与开发，负责第三方登录、购物车、第三方支付模块开发，负责后台订单管理和商品管理，使用MQ消息队列实现商品变更时向前台及搜索模块推送消息。</p>
-          <div class="tech-tags"><span class="tech-tag">SSM</span><span class="tech-tag">Redis</span><span class="tech-tag">RabbitMQ</span><span class="tech-tag">REST API</span></div>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-card">
-          <div class="company">青岛蓝海汇网络科技有限公司</div>
-          <div class="project">集鲜送 — 生鲜批发APP</div>
-          <div class="period">2016.10 — 2017.05</div>
-          <p class="desc">负责与上级对接业务思路，搭建测试环境，分配任务，处理老数据兼容，负责提现、结算、支付模块开发。基于SpringBoot + Dubbo微服务架构。</p>
-          <div class="tech-tags"><span class="tech-tag">SpringBoot</span><span class="tech-tag">Dubbo</span><span class="tech-tag">Redis</span><span class="tech-tag">MyBatis</span></div>
-        </div>
-      </div>
+      <!-- 上海津昉 -->
       <div class="timeline-item">
         <div class="timeline-card">
           <div class="company">上海津昉信息技术有限公司</div>
-          <div class="project">焦化通 — B2B电商平台</div>
-          <div class="period">2015.12 — 2016.10</div>
-          <p class="desc">负责Redis集群搭建，负责竞价交易模块、后台管理系统搭建及日志管理模块开发。通过线上平台模式将资源直接对接，减少中间环节。</p>
-          <div class="tech-tags"><span class="tech-tag">SSM</span><span class="tech-tag">Redis Cluster</span><span class="tech-tag">MySQL</span></div>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-card">
-          <div class="company">上海津昉信息技术有限公司</div>
-          <div class="project">内部OA — 企业办公系统</div>
-          <div class="period">2015.07 — 2015.12</div>
-          <p class="desc">负责信息发布、权限管理、BBS板块开发，参与框架选型（SSH）、项目优化及Bug调试。涵盖会议管理、日程管理、考勤、公告、客户管理等模块。</p>
-          <div class="tech-tags"><span class="tech-tag">Struts2</span><span class="tech-tag">Spring</span><span class="tech-tag">Hibernate</span><span class="tech-tag">MySQL</span></div>
+          <div class="period">2015.07 — 2016.10</div>
+          <div class="sub-project">
+            <div class="sub-project-name">焦化通 — B2B电商平台</div>
+            <div class="period period-sub">2015.12 — 2016.10</div>
+            <p class="desc">负责Redis集群搭建，负责竞价交易模块、后台管理系统搭建及日志管理模块开发。通过线上平台模式将资源直接对接，减少中间环节。</p>
+            <div class="tech-tags"><span class="tech-tag">SSM</span><span class="tech-tag">Redis Cluster</span><span class="tech-tag">MySQL</span></div>
+          </div>
+          <div class="sub-project">
+            <div class="sub-project-name">内部OA — 企业办公系统</div>
+            <div class="period period-sub">2015.07 — 2015.12</div>
+            <p class="desc">负责信息发布、权限管理、BBS板块开发，参与框架选型（SSH）、项目优化及Bug调试。涵盖会议管理、日程管理、考勤、公告、客户管理等模块。</p>
+            <div class="tech-tags"><span class="tech-tag">Struts2</span><span class="tech-tag">Spring</span><span class="tech-tag">Hibernate</span><span class="tech-tag">MySQL</span></div>
+          </div>
         </div>
       </div>
     </div>
